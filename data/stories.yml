@@ -1,0 +1,58 @@
+version: "3.1"
+
+stories:
+
+  - story: greet the user
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - story: user says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: Check loan options from provided car info
+    steps:
+      - intent: apply_loan
+      - action: utter_apply_loan
+      - intent: provide_car_info
+      - action: action_check_loan_options
+
+  - story: Ask Silk Bank terms
+    steps:
+      - intent: ask_silk_terms
+      - action: utter_ask_silk_terms
+
+  - story: Ask Central terms
+    steps:
+      - intent: ask_central_terms
+      - action: utter_ask_central_terms
+
+  - story: Ask Flex Capital terms
+    steps:
+      - intent: ask_flex_terms
+      - action: utter_ask_flex_terms
+
+  - story: Ask MoGo terms
+    steps:
+      - intent: ask_mogo_terms
+      - action: utter_ask_mogo_terms
+
+  - story: Ask Dizi terms
+    steps:
+      - intent: ask_dizi_terms
+      - action: utter_ask_dizi_terms
+
+  - story: Ask Age
+    steps:
+      - intent: ask_age_terms
+      - action: utter_ask_age
+      - intent: inform_age
+      - action: action_check_age
+
+
+
+
+
+

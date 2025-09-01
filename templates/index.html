@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %} Car Loan {% endblock %}
+
+{% block content %}
+
+
+<div class="container text-center bg-light py-5">
+    <p class="fs-4">Auto Loan Bot — An Easy Way to Understand Auto Loan Terms</p>
+
+
+    <img src="static/auto.jpg"
+         class="img-fluid mx-auto d-block mb-3"
+         style="max-width: 300px; width: 100%;"
+         alt="ავტო სესხი">
+
+
+
+    <a href="/chat" target="_blank"
+       class="btn btn-success btn-lg px-5 my-3 d-inline-block mx-auto">
+        Write to the chatbot
+    </a>
+
+
+    <!-- ბარათები -->
+    <div class="container my-5">
+        <div class="row text-center bg-info-subtle p-3 rounded">
+
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body bg-body-secondary">
+                        <h5 class="card-title">Fast</h5>
+                        <p class="card-text">Answers questions in seconds — 24/7 customer support.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body bg-body-secondary">
+                        <h5 class="card-title">Simple</h5>
+                        <p class="card-text">Intuitive design — even novice users will have no difficulty using it.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body bg-body-secondary">
+                        <h5 class="card-title">Reliable</h5>
+                        <p class="card-text">Secure data processing.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

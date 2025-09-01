@@ -1,0 +1,28 @@
+{% macro navlink(name, endpoint) %}
+<li class="nav-item">
+    {% if request.endpoint == endpoint %}
+        <a class="nav-link active" href="{{ url_for(endpoint) }}"> {{ name }}</a>
+    {% else %}
+        <a class="nav-link" href="{{ url_for(endpoint) }}"> {{ name }}</a>
+    {% endif %}
+</li>
+{% endmacro %}
+
+
+{% macro login_form(form) %}
+<form action="{{ url_for('login') }}" method="POST" class="d-flex align-items-center gap-2">
+  {{ form.hidden_tag() }}
+  {{ form.username(class="form-control", placeholder="Username") }}
+  {{ form.password(class="form-control", placeholder="Password") }}
+  {{ form.submit(class="btn btn-primary") }}
+</form>
+{% endmacro %}
+
+{% macro logout_button(username) %}
+<div class="d-flex align-items-center gap-2">
+    <span>Hello, {{ username }}</span>
+    <form action="/logout" method="POST" class="m-0">
+        <button class="btn btn-outline-danger" type="submit">Log Out</button>
+    </form>
+</div>
+{% endmacro %}

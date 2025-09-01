@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %} Registration {% endblock %}
+
+{% block content %}
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      <div class="alert alert-{{ category }} mt-2">{{ message }}</div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+  <div class="border rounded p-5 w-100" style="max-width: 400px;">
+
+    {% for errors in form.errors.values() %}
+      {% for error in errors %}
+        <div class="alert alert-danger" role="alert">
+            {{ error }}
+        </div>
+      {% endfor %}
+    {% endfor %}
+
+    <form method="post">
+      {{ form.hidden_tag() }}
+
+      <div class="mb-3">
+        {{ form.username(class="form-control", placeholder=form.username.label.text) }}
+      </div>
+
+      <div class="mb-3">
+        {{ form.password(class="form-control", placeholder=form.password.label.text) }}
+      </div>
+
+      <div class="mb-3">
+        {{ form.repeat_password(class="form-control", placeholder=form.repeat_password.label.text) }}
+      </div>
+
+      <div class="mb-3">
+        {{ form.birthday.label }}
+        {{ form.birthday(class="form-control") }}
+      </div>
+
+      <div class="mb-3">
+        {{ form.country(class="form-select") }}
+      </div>
+
+      <div class="mb-3">
+        {{ form.gender.label }}
+        {{ form.gender }}
+      </div>
+
+      {{ form.submit(class="btn btn-primary w-100") }}
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}
+

@@ -1,0 +1,30 @@
+{% from "macros.html" import navlink, login_form, logout_button %}
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">CarLoan</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- მენიუ მარცხნივ -->
+            <ul class="navbar-nav">
+                {{ navlink("About us", "about") }}
+                {{ navlink("Frequently Asked Questions", "faq") }}
+                {% if not current_user.is_authenticated %}
+                    {{ navlink("Registration", "registration") }}
+                {% endif %}
+            </ul>
+
+            <div class="ms-auto">
+                {% if not current_user.is_authenticated %}
+                    {{ login_form(login_form_obj) }}
+                {% else %}
+                    {{ logout_button(current_user.username) }}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</nav>

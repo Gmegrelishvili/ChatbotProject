@@ -1,0 +1,182 @@
+version: "3.1"
+
+nlu:
+
+  - intent: greet
+    examples: |
+      - hello
+      - hi
+      - hey
+      - good morning
+      - good afternoon
+      - good evening
+      - hi there
+      - hey bot  
+
+  - intent: goodbye
+    examples: |
+      - bye
+      - goodbye
+      - see you
+      - talk to you later
+      - see you soon
+
+  - intent: apply_loan
+    examples: |
+      - I want to buy a car
+      - I need a loan for a car
+      - I need an auto loan
+      - I want car financing
+      - How can I get a loan for a car?
+      - I would like to finance a car
+      - I want a car loan
+      - I want to pawn my car
+      - I want to mortgage my car
+      - I want to use my car as collateral
+      - I need a loan with my car as collateral
+      - Loan against my car
+      - Car pawn loan
+      - Car collateral loan
+      - I want refinancing
+      - I want to transfer my loan
+      - I need loan transfer
+      - Loan porting
+      - I want loan porting
+      - I want to refinance my loan
+      - I want to move my loan to better conditions
+      - I need refinancing
+      - I need money for customs clearance
+      - I want a loan for customs
+      - I need money to clear a car
+      - Loan for car customs clearance
+      - I need funds for car clearance
+      - I want a customs clearance loan
+
+
+  - intent: provide_car_info
+    examples: |
+      - [2005](year) Toyota Corolla
+      - BMW X5 [2010](year)
+      - Mercedes E200 [2004](year)
+      - Honda Civic [2015](year)
+      - [2012](year) Audi A4
+      - Toyota Prius [2007](year)
+      - BMW E36 [2003](year)
+      - Mercedes-Benz CLK [1999](year)
+      - Pajero IO [1998](year)
+      - BMW X5 [2002](year)
+      - [2005](year) Toyota Corolla
+      - BMW X5 [2010](year)
+      - Mercedes E200 [2004](year)
+      - Honda Civic [2015](year)
+      - [2012](year) Audi A4
+      - Toyota Prius [2007](year)
+      - BMW E36 [1996](year)
+      - Mercedes-Benz CLK [1997](year)
+      - Pajero IO [1998](year)
+      - BMW X5 [2002](year)
+      - Toyota Camry [2008](year)
+      - Hyundai Elantra [2011](year)
+      - Lexus RX [2017](year)
+      - Opel Astra [2006](year)
+      - Ford Focus [2013](year)
+
+  - intent: ask_silk_terms
+    examples: |
+      - Tell me about Silk Bank terms
+      - What are Silk Bank conditions?
+      - Silk Bank interest rate
+      - How does Silk Bank finance work?
+      - I want details about Silk Bank loans
+
+  - intent: ask_central_terms
+    examples: |
+      - Tell me about Central terms
+      - What are Central Bank conditions?
+      - Central interest rate
+      - How does Central finance work?
+      - I want details about Central loans
+
+  - intent: ask_mogo_terms
+    examples: |
+      - Tell me about MoGo terms
+      - What are MoGo conditions?
+      - MoGo interest rate
+      - How does MoGo finance work?
+      - I want details about MoGo loans
+
+  - intent: ask_flex_terms
+    examples: |
+      - Tell me about Flex Capital terms
+      - What are Flex Capital conditions?
+      - Flex Capital interest rate
+      - How does Flex Capital finance work?
+      - I want details about Flex Capital loans
+
+  - intent: ask_dizi_terms
+    examples: |
+      - Tell me about Dizi terms
+      - What are Dizi conditions?
+      - Dizi interest rate
+      - How does Dizi finance work?
+      - I want details about Dizi loans
+
+  - intent: ask_age_terms
+    examples: |
+      - What are the loan terms based on age?
+      - Can I get a loan if I am 20 years old?
+      - Am I eligible for a loan at 21?
+      - Do you offer loans for people under 22?
+      - Which companies give loans to 22 year olds?
+      - Can I apply if I am younger than 21?
+      - What happens if I am 19, can I still get a loan?
+      - Are loans available for someone who is 21?
+      - Is there a minimum age requirement for loans?
+      - At what age can I get a loan everywhere?
+
+
+  - intent: inform_age
+    examples: |
+      - I am [20](age) years old
+      - My age is [21](age)
+      - I am [22](age)
+      - I am [19](age)
+      - I am [25](age)
+      - I am [30](age)
+      - My age is [18](age)
+      - I am [23](age)
+      - I am [21](age)
+      - My age is [24](age)
+
+
+
+
+      - synonym: pawn
+        examples: |
+          - mortgage
+          - collateral
+          - pledge
+          - pawn loan
+          - car pawn
+          - car mortgage
+          - car collateral
+
+      - synonym: refinancing
+        examples: |
+          - porting
+          - loan transfer
+          - transfer loan
+          - refinance
+          - move loan
+          - loan porting
+
+      - synonym: customs clearance
+        examples: |
+          - clearance
+          - car clearance
+          - import tax
+          - car customs
+          - customs loan
+          - customs payment
+    
+

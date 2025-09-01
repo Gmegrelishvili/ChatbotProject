@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %} Log In {% endblock %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+  <div class="border rounded p-5 w-100" style="max-width: 400px;">
+
+    {% for errors in form.errors.values() %}
+      {% for error in errors %}
+        <div class="alert alert-danger" role="alert">
+            {{ error }}
+        </div>
+      {% endfor %}
+    {% endfor %}
+
+    <form method="POST">
+      {{ form.hidden_tag() }}
+
+      <div class="mb-3">
+        {{ form.username(class="form-control", placeholder=form.username.label.text) }}
+      </div>
+
+      <div class="mb-3">
+        {{ form.password(class="form-control", placeholder=form.password.label.text) }}
+      </div>
+
+      {{ form.submit(class="btn btn-primary w-100") }}
+    </form>
+
+  </div>
+</div>
+{% endblock %}

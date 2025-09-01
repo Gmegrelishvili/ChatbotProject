@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}  Profile {% endblock %}
+
+
+{% block content %}
+
+
+<div class="container mt-5 mb-5">
+    <div class="card p-4 bg-light shadow">
+        <p> Username: {{ current_user.username }} </p>
+        <p> Birthday: {{ current_user.birthday }} </p>
+        <p> Gender: {{ current_user.gender }} </p>
+
+    </div>
+</div>
+{% endblock %}
+
