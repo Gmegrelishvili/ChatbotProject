@@ -1,0 +1,92 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - apply_loan
+  - provide_car_info
+  - ask_silk_terms
+  - ask_central_terms
+  - ask_mogo_terms
+  - ask_flex_terms
+  - ask_dizi_terms
+  - inform_age
+  - ask_age_terms
+
+entities:
+  - year
+  - age
+
+actions:
+  - action_check_loan_options
+  - action_check_age
+
+slots:
+  year:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: year
+      - type: from_text
+
+
+  age:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: age
+      - type: from_text
+
+responses:
+  utter_greet:
+    - text: "Hello! I'm CarAi, an auto loan expert. How can I help you?"
+    - text: "Hello! I'm CarAi — I'll answer any questions you have about auto loans. Where should we start?"
+
+  utter_goodbye:
+    - text: "Goodbye! Have a great day!"
+    - text: "See you later 👋"
+
+  utter_apply_loan:
+    - text: "We partner with 5 companies: Silk Bank, Central, Flex Capital, Mogo and Dizi. Each has different terms and conditions. Send me your car details (manufacturer, model, and year of manufacture) and I will tell you which company will be able to finance it."
+
+
+  utter_ask_silk_terms:
+    - text: "Silk Bank has been financing since 2005, up to 70% of the market value. The car remains in your name, GPS is not installed. There is no issuance fee, only 260 GEL of collateral is deducted. The effective interest rate depends on the borrower's credit history."
+
+  utter_ask_central_terms:
+    - text: "Central has been financing since 2005, up to 80% of the market value. The car remains in your name, GPS is not installed. The issuance fee is 2%, only 260 GEL of collateral is deducted. The effective interest rate depends on the borrower's credit history."
+
+  utter_ask_mogo_terms:
+    - text: "Mogo has been financing since 1995, up to 90% of the market value. The car is registered by the company and a GPS is installed until the end of the loan. The issuance fee is 8%, 200 GEL for GPS installation and 204 GEL for registration, all of which are deducted from the approved amount. The effective interest rate depends on the borrower's credit history"
+
+  utter_ask_flex_terms:
+    - text: "Flex Capital has been financing since 1990, up to 60% of the market value. The car remains in your name, no GPS is installed. The issuance fee is 4%, only 260 GEL of collateral is deducted. The effective interest rate depends on the borrower's credit history."
+
+  utter_ask_dizi_terms:
+    - text: "Dizi has been financing since 2005, up to 90% of the market value. The car is registered by the company and the GPS is installed until the end of the loan. The issuance fee is 8%, 200 GEL for GPS installation and 204 GEL for registration, all of which are deducted from the approved amount. The effective interest rate depends on the borrower's credit history"
+
+  utter_ask_age:
+    - text: "How old are you?"
+
+
+
+
+
+
+
+
+
+
+
+#responses:
+
+
+
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
