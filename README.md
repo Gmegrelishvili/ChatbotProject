@@ -65,10 +65,16 @@ log in, and store conversation history.
 
 ## Sample Conversation
 **User:** I want to buy a car  
-**Bot:** We partner with 5 companies: Silk Bank, Central, Flex Capital, Mogo and Dizi. Each has different terms and conditions. Send me your car details (manufacturer, model, and year of manufacture) and I will tell you which company will be able to finance it. 
+**Bot:** We partner with 5 companies: Silk Bank, Central, Flex Capital, MoGo and Dizi. Each has different terms and conditions. Send me your car details (manufacturer, model, and year of manufacture) and I will tell you which company will be able to finance it. 
 
-**User:** My age is 21  
-**Bot:** ⚠️ All companies will review your application, except Dizi.
+**User:** BMW X5 2010  
+**Bot:** Your car can be financed by any partner company. The best terms are with Silk Bank.
+
+**User:** BMW 323 1996  
+**Bot:** Your car can only be financed through MoGo and Flex Capital.
+
+
+
 
 
 
