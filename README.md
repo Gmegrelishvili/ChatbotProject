@@ -63,7 +63,7 @@ log in, and store conversation history.
     Open in browser: http://127.0.0.1:5000
    
 
-## Sample Conversation
+## Sample Conversation – Car Financing
 **User:** I want to buy a car  
 **Bot:** We partner with 5 companies: Silk Bank, Central, Flex Capital, MoGo and Dizi. Each has different terms and conditions. Send me your car details (manufacturer, model, and year of manufacture) and I will tell you which company will be able to finance it. 
 
@@ -72,6 +72,24 @@ log in, and store conversation history.
 
 **User:** BMW 323 1996  
 **Bot:** Your car can only be financed through MoGo and Flex Capital.
+
+
+## Sample Conversation – Age Check
+**User:** What are the loan terms based on age?  
+**Bot:** How old are you?
+
+**User:** My age is 25  
+**Bot:** ✅ All companies will review your application.
+
+**User:** My age is 21  
+**Bot:** ⚠️ All companies are considering it, except Dizi.
+
+**User:** My age is 19  
+**Bot:** ⚠️ Only Flex Capital will review your application.
+
+**User:** My age is 16  
+**Bot:** ⚠️ Your application will not be considered because you are not of legal age.
+
 
 
 
